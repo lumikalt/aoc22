@@ -1,7 +1,7 @@
 use aoc22::{input::get_input, *};
 
 fn main() {
-    dbg!(day3::part_1(&get_input(3)));
+    dbg!(day3::part_2(&get_input(3)));
 }
 
 #[cfg(test)]
@@ -27,7 +27,7 @@ mod tests {
 
 10000";
 
-        assert_eq!(day1::part_1(INPUT), 24000u64.to_string());
+        assert_eq!(day1::part_1(INPUT), 24000.to_string());
     }
 
     #[test]
@@ -36,8 +36,8 @@ mod tests {
 B X
 C Z";
 
-        assert_eq!(day2::part_1(INPUT), 15u64.to_string());
-        assert_eq!(day2::part_2(INPUT), 12u64.to_string());
+        assert_eq!(day2::part_1(INPUT), 15.to_string());
+        assert_eq!(day2::part_2(INPUT), 12.to_string());
     }
 
     #[test]
@@ -50,5 +50,6 @@ ttgJtRGJQctTZtZT
 CrZsJsPPZsGzwwsLwLmpwMDw";
 
         assert_eq!(day3::part_1(INPUT), 157.to_string());
+        assert_eq!(day3::part_2(INPUT), 70.to_string())
     }
 }

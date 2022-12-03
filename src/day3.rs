@@ -24,5 +24,13 @@ pub fn part_1(input: &str) -> String {
 }
 
 pub fn part_2(input: &str) -> String {
-    "".to_owned()
+    input
+        .lines()
+        .array_chunks()
+        .map(|[a, b, c]| {
+            let pos = a.find(|ch| b.contains(ch) && c.contains(ch)).unwrap();
+            priority(a.chars().nth(pos).unwrap()) as u64
+        })
+        .sum::<u64>()
+        .to_string()
 }
