@@ -1,7 +1,8 @@
 use aoc22::{input::get_input, *};
 
 fn main() {
-    dbg!(day3::part_2(&get_input(3)));
+    dbg!(day4::part_1(&get_input(4)));
+    dbg!(day4::part_2(&get_input(4)));
 }
 
 #[cfg(test)]
@@ -51,5 +52,17 @@ CrZsJsPPZsGzwwsLwLmpwMDw";
 
         assert_eq!(day3::part_1(INPUT), 157.to_string());
         assert_eq!(day3::part_2(INPUT), 70.to_string())
+    }
+
+    #[test]
+    fn day_4() {
+        const INPUT: &str = "2-4,6-8
+2-3,4-5
+5-7,7-9
+2-8,3-7
+6-6,4-6
+2-6,4-8";
+
+        assert_eq!(day4::part_1(INPUT), 2.to_string());
     }
 }
